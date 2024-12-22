@@ -1,5 +1,4 @@
 import { CarProps } from "@/types";
-
 export async function fetchCars() {
   const headers: HeadersInit = {
     "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
@@ -28,6 +27,7 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   return rentalRatePerDay.toFixed(0);
 };
 
+
 export const generateCarImageUrl = (car:CarProps,angle?:string)=>{
   const url = new URL("https://cdn.imagin.studio/getimage")
   const {make,model , year} = car;
@@ -40,3 +40,4 @@ export const generateCarImageUrl = (car:CarProps,angle?:string)=>{
   return `${url}`; 
   
 }
+

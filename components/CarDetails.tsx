@@ -1,6 +1,6 @@
 "use client";
 import { CarProps } from "@/types";
-import React, { Fragment } from "react";
+import React, { Dispatch, Fragment, SetStateAction } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -8,16 +8,17 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import Image from "next/image";
+import { generateCarImageUrl } from "@/utils";
 interface CarDetailsProps {
   isOpen: boolean;
-  closeModal: () => void;
+  closeModal: Dispatch<SetStateAction<boolean>>;
   car: CarProps;
 }
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10" onClose={()=>closeModal(false)}>
           <TransitionChild
             as={Fragment}
             enter="ease-out duraiton-30"
@@ -43,7 +44,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                 <DialogPanel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5 p-6">
                   <button
                     type="button"
-                    onClick={closeModal}
+                    onClick={()=>{closeModal(false)}}
                     className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
                   >
                     <Image
@@ -57,7 +58,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   <div className="flex-1 flex flex-col gap-3 ">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg ">
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car,"29")}
                         alt="car model"
                         fill
                         priority
@@ -67,7 +68,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <div className="flex gap-3 ">
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,"33")}
                           alt="car model"
                           fill
                           priority
@@ -76,7 +77,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,"13")}
                           alt="car model"
                           fill
                           priority
@@ -85,7 +86,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,"angle")}
                           alt="car model"
                           fill
                           priority

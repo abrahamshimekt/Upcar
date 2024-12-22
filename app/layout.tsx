@@ -3,8 +3,9 @@ import "./globals.css";
 import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Up car ",
+  title: "Upcar",
   description: "Discover the best cars in the world",
+  icons:'/logo.svg'
 };
 
 export default function RootLayout({

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
+import { Footer, Navbar } from "@/components";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
@@ -16,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider>
-        <body className={`relative`}>{children}</body>
+        <body className={`relative`}>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
       </ClerkProvider>
     </html>
   );

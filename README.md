@@ -31,6 +31,8 @@ Developed with Next.js and leveraging its server-side rendering capabilities, th
 - Tailwind CSS
 - headlessui
 - clerk
+- rapidApi
+- imagin studio(car image api)
 
 ## <a name="features">🔋 Features</a>
 

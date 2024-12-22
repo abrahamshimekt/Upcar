@@ -19,8 +19,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+6. 
 ## <a name="introduction">🤖 Introduction</a>
 
 Developed with Next.js and leveraging its server-side rendering capabilities, the Car Showcase website presents various car types, showcasing comprehensive information in a well-designed format with advanced filtering and pagination support for an enhanced user experience.
@@ -31,6 +30,7 @@ Developed with Next.js and leveraging its server-side rendering capabilities, th
 - TypeScript
 - Tailwind CSS
 - headlessui
+- clerk
 
 ## <a name="features">🔋 Features</a>
 
@@ -65,7 +65,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git https://github.com/abrahamshimekt/Upcar
+git clone https://github.com/abrahamshimekt/Upcar.git
 cd upcar
 ```
 

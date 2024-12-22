@@ -55,7 +55,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
                     }`
                   }
                 >
-                  {({ focus, selected }) => (
+                  {({selected }) => (
                     <span
                       className={`block truncate ${
                         selected ? "font-medium" : "font-normal"

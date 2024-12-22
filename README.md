@@ -30,6 +30,7 @@ Developed with Next.js and leveraging its server-side rendering capabilities, th
 - Next.js
 - TypeScript
 - Tailwind CSS
+- headlessui
 
 ## <a name="features">🔋 Features</a>
 

@@ -471,20 +471,3 @@ module.exports = {
 };
 ```
 
-</details>
-
-## <a name="links">🔗 Links</a>
-
-Assets used in the project are [here](https://drive.google.com/file/d/1Ague8aTHA6JSrzy3kscEZmrJQdtDxqwy/view)
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js 14 Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<br />
-<br />
-
-
-#
